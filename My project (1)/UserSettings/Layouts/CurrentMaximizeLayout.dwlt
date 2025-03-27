@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: -1
+  controlID: 23
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: -1
+  controlID: 24
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -948,9 +948,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 74900000
-      m_LastClickedID: 0
-      m_ExpandedIDs: a464ffff4066ffff0a67ffff2276ffff9279ffff0882ffff5e86ffffa486ffff968affff0293ffff4096ffff7cadffffb6beffffc6befffffabeffff4cbfffffd8e2ffff42e3ffffb0e3ffff1ee4ffffa8e4ffffcce5ffffdce5ffff10e6fffff4e7ffffb0ecffff00edffff76eefffffaeeffff9ef2ffffd4f2ffff0cfbffffb4ab000050ac00006eac0000d8b80000e2b80000d2ba0000f0ba000058c5000076c50000c8df0000d2df000054e000005ee00000
+      m_SelectedIDs: 0ec00000
+      m_LastClickedID: 49166
+      m_ExpandedIDs: e075ffff4e76fffff877ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Art
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\kathi\Desktop\school\periode 3\Group Project\My project
+  m_LastProjectPath: C:\Users\Gebruiker\Documents\GitHub\UnityGameProject\My project
     (1)
   m_LockTracker:
     m_IsLocked: 0
@@ -1067,7 +1067,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b0230000
     m_LastClickedID: 9136
-    m_ExpandedIDs: ffffffff00000000d88f0000da8f0000de8f0000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1094,9 +1094,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 74900000
-    m_LastClickedID: 36980
-    m_ExpandedIDs: ffffffff00000000d88f0000da8f0000dc8f0000de8f0000
+    m_SelectedIDs: 0ec00000
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff00000000d2a600005ea90000aeb10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1122,8 +1122,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 74900000
-    m_LastClickedInstanceID: 36980
+    m_SelectedInstanceIDs: 0ec00000
+    m_LastClickedInstanceID: 49166
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
