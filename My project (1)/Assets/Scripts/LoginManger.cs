@@ -17,7 +17,7 @@ public class LoginManger : MonoBehaviour
     public TextMeshProUGUI registerationMassage;
 
 
-    private string apiUrl = "https://localhost:7223/account/login";
+    private string apiUrl = "https://avansict377789.azurewebsites.net/account/login";
 
     void Start()
     {

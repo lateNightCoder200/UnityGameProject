@@ -34,7 +34,7 @@ public class NotesManager : MonoBehaviour
 
         string email = PlayerPrefs.GetString("userEmail");
 
-        getUrl = "https://localhost:7223/GetNotes/" + email;
+        getUrl = "https://avansict377789.azurewebsites.net/GetNotes/" + email;
         StartCoroutine(FetchNotes(getUrl));
     }
 

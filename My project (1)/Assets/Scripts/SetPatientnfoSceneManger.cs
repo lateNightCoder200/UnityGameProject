@@ -24,7 +24,7 @@ public class SetPatientnfoSceneManger : MonoBehaviour
     public Button submmitButton;
     public TextMeshProUGUI errorText;
 
-    private string apiUrl = "https://localhost:7223/PatientInfo";
+    private string apiUrl = "https://avansict377789.azurewebsites.net/PatientInfo";
 
     void Start()
     {

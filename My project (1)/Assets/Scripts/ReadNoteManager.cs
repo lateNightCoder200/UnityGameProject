@@ -36,7 +36,7 @@ public class ReadNoteManager : MonoBehaviour
         //string noteName = "ali";
         //string email = "abdallah@gmail.com";
 
-        string apiUrl = "https://localhost:7223/GetNote";
+        string apiUrl = "https://avansict377789.azurewebsites.net/GetNote";
         StartCoroutine(FetchNote(apiUrl , noteName , email));
     }
 

@@ -38,7 +38,7 @@ public class AddNoteManager : MonoBehaviour
         string email = PlayerPrefs.GetString("userEmail");
        
 
-        string apiUrl = "https://localhost:7223/AddNote";
+        string apiUrl = "https://avansict377789.azurewebsites.net/AddNote";
         string noteInput = NoteInput.text;
         string titleInput = TitleInput.text;
 

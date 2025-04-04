@@ -16,7 +16,7 @@ public class RegisterManger : MonoBehaviour
     public Button signUpButton;
     public TextMeshProUGUI errorText;
 
-    private string apiUrl = "https://localhost:7223/account/register";
+    private string apiUrl = "https://avansict377789.azurewebsites.net/account/register";
 
     void Start()
     {

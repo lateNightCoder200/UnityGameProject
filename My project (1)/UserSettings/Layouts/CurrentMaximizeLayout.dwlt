@@ -174,8 +174,8 @@ MonoBehaviour:
     y: 0
     width: 725.6
     height: 368
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -911,9 +911,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ccb60000
-      m_LastClickedID: 46796
-      m_ExpandedIDs: a6c1ffff12c2ffff2ec7ffff28c9ffffd4caffff1acbffff6eccfffff2d6ffff26dbffff26dcffff72dcffff12ddffff68ddffff70e6ffff46e7ffffc0e7ffff14e8ffff5ae8ffff44f0ffff0cfbffffb08f0000e28f0000ec8f0000ee920000fe9600003a9c0000de9e0000089f000068a50000e0a70000aca90000bab60000
+      m_SelectedIDs: a0320000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 74f9ffff0cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1010,7 +1010,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1029,7 +1030,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b0230000
     m_LastClickedID: 9136
-    m_ExpandedIDs: ffffffff000000002a90000088900000bc900000c09000009ca00000
+    m_ExpandedIDs: 00000000889000008a9000008c9000008e90000090900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1056,9 +1057,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ccb60000
-    m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000002a90000088900000bc900000c09000009ca00000
+    m_SelectedIDs: a0320000
+    m_LastClickedID: 12960
+    m_ExpandedIDs: ffffffff00000000889000008a9000008c90000090900000f4900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1084,8 +1085,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ccb60000
-    m_LastClickedInstanceID: 46796
+    m_SelectedInstanceIDs: a0320000
+    m_LastClickedInstanceID: 12960
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -1163,8 +1164,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1192
-    y: 79.200005
+    x: 1193
+    y: 24
     width: 343
     height: 690.8
   m_SerializedDataModeController:

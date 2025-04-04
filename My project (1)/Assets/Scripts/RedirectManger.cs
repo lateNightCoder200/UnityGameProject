@@ -33,7 +33,7 @@ public class RedirectManger : MonoBehaviour
 
         string email = PlayerPrefs.GetString("userEmail", "");
 
-        string getUrl = "https://localhost:7223/CheckPatientInfo/" + email;
+        string getUrl = "https://avansict377789.azurewebsites.net/CheckPatientInfo/" + email;
         StartCoroutine(FetchPatientInfo(getUrl));
     }
 

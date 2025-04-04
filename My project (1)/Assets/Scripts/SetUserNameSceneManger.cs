@@ -15,7 +15,7 @@ public class SetUserNameSceneManger : MonoBehaviour
     public Button submmitButton;
     public TextMeshProUGUI errorText;
 
-    private string apiUrl = "https://localhost:7223/api/User";
+    private string apiUrl = "https://avansict377789.azurewebsites.net/api/User";
 
     void Start()
     {
