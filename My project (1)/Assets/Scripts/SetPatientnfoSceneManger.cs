@@ -17,6 +17,9 @@ public class SetPatientnfoSceneManger : MonoBehaviour
     public TMP_InputField cityInput;
     public TMP_InputField birthDateInput;
     public TMP_InputField hospitalInput;
+    public TMP_InputField TreatmentPlan;
+    public TMP_InputField TteatmentDate;
+    public TMP_InputField doctorName;
 
     public Button submmitButton;
     public TextMeshProUGUI errorText;
@@ -37,31 +40,52 @@ public class SetPatientnfoSceneManger : MonoBehaviour
         string birthDate = birthDateInput.text;
         string city = cityInput.text;
         string hospital = hospitalInput.text;
+        string DoctorName = doctorName.text;
+        string treatmentPlan =  TreatmentPlan.text.Trim().ToUpper();
+        string treatmentDate = TteatmentDate.text;
 
-        if (string.IsNullOrEmpty(firstName))
-            errorText.text = "First name is required!";
 
+        if(treatmentPlan == "A")
+            Debug.Log("a");
+        if (treatmentPlan == "B")
+            Debug.Log("B");
         if (string.IsNullOrEmpty(lastName))
+        {
             errorText.text = "Last name is required!";
+        }
 
-        if (string.IsNullOrEmpty(birthDate))
+        else if (string.IsNullOrEmpty(birthDate)){ 
             errorText.text = "Birth date is required!";
+        }
 
-        if (string.IsNullOrEmpty(city))
+        else if (string.IsNullOrEmpty(city)){ 
             errorText.text = "Cityis is required!";
-
-        if (string.IsNullOrEmpty(hospital))
+        }
+        else if (string.IsNullOrEmpty(hospital)){ 
             errorText.text = "Hospital is required!";
-
+        }
+        else if (string.IsNullOrEmpty(treatmentPlan)){ 
+            errorText.text = "Treatment Plan is required!";
+        }
+        else if (string.IsNullOrEmpty(treatmentDate)){ 
+            errorText.text = "Treatment Date is required!";
+        }
+        else if (string.IsNullOrEmpty(DoctorName)){ 
+            errorText.text = "Doctor Name is required!";
+        }
+        else if (treatmentPlan != "A" && treatmentPlan != "B")
+        {
+            errorText.text = "Treatment Plan should be A or B";
+        }
         else
         {
-           
-            StartCoroutine(SetPatientInfoRequest(email, firstName, lastName, birthDate, city, hospital));
+
+            StartCoroutine(SetPatientInfoRequest(email, firstName, lastName, birthDate, city, hospital, treatmentDate, treatmentPlan, DoctorName));
 
         }
     }
 
-    IEnumerator SetPatientInfoRequest(string Email, string firstName, string lastName, string birthDate, string city, string hospital )
+    IEnumerator SetPatientInfoRequest(string Email, string firstName, string lastName, string birthDate, string city, string hospital, string treatmentDate , string treatmentPlan , string DoctorName)
     {
 
        
@@ -72,15 +96,19 @@ public class SetPatientnfoSceneManger : MonoBehaviour
             lastName = lastName,
             birthDate = birthDate,
             city = city,
-            hospital = hospital
+            hospital = hospital,
+            treatmentDate = treatmentDate,
+            treatmentPlan = treatmentPlan,
+            DoctorName = DoctorName
+            
         };
 
        
 
         string jsonData = JsonConvert.SerializeObject(requestData);
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+   
 
-        using (UnityWebRequest request = new UnityWebRequest(apiUrl  , "POST"))
+        using (UnityWebRequest request = UnityWebRequest.Post(apiUrl, jsonData, "application/json"))
         {
 
             string token = PlayerPrefs.GetString("authToken");
@@ -88,10 +116,7 @@ public class SetPatientnfoSceneManger : MonoBehaviour
             {
                 request.SetRequestHeader("Authorization", "Bearer " + token);
             }
-
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
+ 
 
             yield return request.SendWebRequest();
 
@@ -120,4 +145,7 @@ class PatientInfo {
     public string birthDate;
     public string city;
     public string hospital;
+    public string DoctorName;
+    public string treatmentDate;
+    public string treatmentPlan;
 };

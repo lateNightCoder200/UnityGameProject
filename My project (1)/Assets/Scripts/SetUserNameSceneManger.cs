@@ -46,10 +46,10 @@ public class SetUserNameSceneManger : MonoBehaviour
     {
         UserName requestData = new UserName { email = Email, newUserName = newUserName };
         string jsonData = JsonConvert.SerializeObject(requestData);
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+      
         Debug.Log(Email);
         Debug.Log(" good 2");
-        using (UnityWebRequest request = new UnityWebRequest(apiUrl, "POST"))
+        using (UnityWebRequest request = UnityWebRequest.Post(apiUrl, jsonData, "application/json"))
         {
 
             string token = PlayerPrefs.GetString("authToken");
@@ -58,8 +58,7 @@ public class SetUserNameSceneManger : MonoBehaviour
                 request.SetRequestHeader("Authorization", "Bearer " + token);
             }
 
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
+     
             request.SetRequestHeader("Content-Type", "application/json");
 
             yield return request.SendWebRequest();

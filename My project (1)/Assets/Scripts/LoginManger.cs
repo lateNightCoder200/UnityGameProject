@@ -14,18 +14,32 @@ public class LoginManger : MonoBehaviour
     public TMP_InputField passwordInput;
     public Button loginButton;
     public TextMeshProUGUI errorText;
+    public TextMeshProUGUI registerationMassage;
+
 
     private string apiUrl = "https://localhost:7223/account/login";
 
     void Start()
     {
         loginButton.onClick.AddListener(OnLoginClicked);
+
+        passwordInput.contentType = TMP_InputField.ContentType.Password;
+
+        string massage = PlayerPrefs.GetString("registerationMassage");
+
+        registerationMassage.text = massage;
+        PlayerPrefs.DeleteKey("registerationMassage");
     }
+
 
     void OnLoginClicked()
     {
         string email = emailInput.text.Trim();
         string password = passwordInput.text;
+
+     
+        
+
 
         if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
         {
@@ -33,7 +47,10 @@ public class LoginManger : MonoBehaviour
             return;
         }
 
-        StartCoroutine(LoginRequest(email, password));
+        else
+        {
+            StartCoroutine(LoginRequest(email, password));
+        }
     }
 
     IEnumerator LoginRequest(string email, string password)
@@ -41,13 +58,10 @@ public class LoginManger : MonoBehaviour
 
         var loginData = new { email = email, password = password };
         string jsonData = JsonConvert.SerializeObject(loginData);
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+     
 
-        using (UnityWebRequest request = new UnityWebRequest(apiUrl, "POST"))
+        using (UnityWebRequest request = UnityWebRequest.Post(apiUrl, jsonData, "application/json"))
         {
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
 
             yield return request.SendWebRequest();
 

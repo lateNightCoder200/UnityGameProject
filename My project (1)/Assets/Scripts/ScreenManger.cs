@@ -20,6 +20,17 @@ public class ScreenManger : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
+    public void Exit()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void GoToSetPatientInfoScene()
+    {
+        SceneManager.LoadScene("SetPatientInfo");
+    }
+
     public void GoToHomeScene()
     {
         SceneManager.LoadScene("HomeScene");
@@ -40,6 +51,17 @@ public class ScreenManger : MonoBehaviour
     {
         SceneManager.LoadScene("UpdateUserNameScene");
     }
+    
+
+    public void GoToDageBoekMainScene()
+    {
+        SceneManager.LoadScene("DageBoekMainScene");
+    }
 
     
+
+    public void GoToAddNoteScene()
+    {
+        SceneManager.LoadScene("AddNoteScene");
+    }
 }
