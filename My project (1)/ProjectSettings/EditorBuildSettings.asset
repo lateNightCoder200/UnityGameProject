@@ -56,6 +56,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ReadNoteScene.unity
     guid: 2c0eb867189d03341a134619ee61be6a
+  - enabled: 1
+    path: Assets/Scenes/RedirectTrajctScene.unity
+    guid: 8a8d79d5459f7b844919bc2205fb3e06
+  - enabled: 1
+    path: Assets/Scenes/behandeltrajectA.unity
+    guid: 89f0e00566716724aad862b1503ab84b
+  - enabled: 1
+    path: Assets/Scenes/behandeltrajectB.unity
+    guid: 28ce70b637d438d478ac2e81285ec325
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
