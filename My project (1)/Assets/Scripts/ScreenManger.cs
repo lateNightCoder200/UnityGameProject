@@ -64,4 +64,9 @@ public class ScreenManger : MonoBehaviour
     {
         SceneManager.LoadScene("AddNoteScene");
     }
+
+    public void GoToTraject()
+    {
+        SceneManager.LoadScene("RedirectTrajctScene");
+    }
 }
