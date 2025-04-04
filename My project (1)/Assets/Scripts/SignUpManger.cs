@@ -7,6 +7,7 @@ using System.Text;
 using Newtonsoft.Json;
 using TMPro;
 using System.Linq;
+using UnityEditor.PackageManager.Requests;
 
 public class RegisterManger : MonoBehaviour
 {
@@ -15,13 +16,16 @@ public class RegisterManger : MonoBehaviour
     public Button signUpButton;
     public TextMeshProUGUI errorText;
 
-    private string apiUrl = "https://localhost:7223/account/register";
+    private string apiUrl = "https://avansict377789.azurewebsites.net/account/register";
 
     void Start()
     {
+        passwordInput.contentType = TMP_InputField.ContentType.Password;
         signUpButton.onClick.AddListener(OnLoginClicked);
     }
 
+   
+   
     void OnLoginClicked()
     {
         string email = emailInput.text.Trim();
@@ -72,12 +76,9 @@ public class RegisterManger : MonoBehaviour
         string jsonData = JsonConvert.SerializeObject(loginData);
         byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
 
-        using (UnityWebRequest request = new UnityWebRequest(apiUrl, "POST"))
+        using (UnityWebRequest request = UnityWebRequest.Post(apiUrl , jsonData , "application/json"))
         {
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
-
+          
             yield return request.SendWebRequest();
 
             if (request.result == UnityWebRequest.Result.Success)
@@ -85,6 +86,8 @@ public class RegisterManger : MonoBehaviour
 
                 LoginResponse response = JsonConvert.DeserializeObject<LoginResponse>(request.downloadHandler.text);
 
+
+                PlayerPrefs.SetString("registerationMassage", "Registratie succesvol! Log in om je registratie te voltooien en toegang te krijgen tot je account!");
                 SceneManager.LoadScene("LoginScene");
 
             }
