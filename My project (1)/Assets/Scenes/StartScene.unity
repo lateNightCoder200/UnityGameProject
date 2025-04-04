@@ -283,12 +283,12 @@ SpriteRenderer:
   m_SortingLayerID: 226436473
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6390383160689960129, guid: 8f210af50124e4b4fa84b1eca9cc76b4, type: 3}
+  m_Sprite: {fileID: 2454268869000820656, guid: 7960bb06af2bab440beab712a9126de4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 17.46, y: 8.69}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -304,7 +304,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -962,8 +962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -51.7542}
-  m_SizeDelta: {x: -1256.1586, y: -551.5969}
+  m_AnchoredPosition: {x: 175, y: -164}
+  m_SizeDelta: {x: -813.2576, y: -802.3302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870741377
 MonoBehaviour:
@@ -1060,10 +1060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welkom bij jouw herstelreis!\r\nHoi daar! We weten dat een bot breken
-    niet leuk is, maar maak je geen zorgen\u2014wij zijn er om je te helpen! Deze
-    app begeleidt je stap voor stap door je herstel, zodat je weet wat je kunt verwachten.
-    Laten we beginnen!"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
